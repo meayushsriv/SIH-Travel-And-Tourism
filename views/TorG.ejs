@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/TorGstyle.css" />
+    <title>Welcome - WayFar</title>
+    <link rel="icon" type="image/x-icon" href="/public/images/Favicon.jpg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"><img src="/public/images/Logo.png" height="75px" width="75px"></div>
+        <div class="menu">
+            <svg class="line-top" width="750" height="0px" viewbox="0,0 1000,20">
+                <line class="line-dash" x1="0" y1="15" x2="1000" y2="15"
+                    style="stroke: lightcyan; stroke-width:2; stroke-linecap:round; stroke-dasharray: 180,1200; stroke-dashoffset: -35;" />
+            </svg>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/login">Log in</a></li>
+            </ul>
+            <br>
+            <!-- <svg class="line-bottom" width="750" height="30" viewbox="0,0 1000,40">
+            <polygon class="lb" points="35,53 115,53 125,43 135,53 215,53" />
+            <polygon class="lb" points="285,53 365,53 375,43 385,53 465,53" />
+            <polygon class="lb" points="535,53 615,53 625,43 635,53 715,53" />
+            <polygon class="lb" points="785,53 865,53 875,43 885,53 965,53" />
+            </svg> -->
+        </div>
+    </div>
+    <div id="pSlider">
+        <ol id="slider-container" dir="ltr">
+            <li id="slide_1" class="li_slide">
+                <div class="slide-snapper"></div>
+                <a class="prev_slide" href="/public/images/TorG_car1.jpg"></a>
+                <a class="next_slide" href="/public/images/TorG_car2.jpg"></a>
+            </li>
+            <li id="slide_2" class="li_slide">
+                <div class="slide-snapper"></div>
+                <a class="prev_slide" href="/public/images/TorG_car2.jpg"></a>
+                <a class="next_slide" href="/public/images/TorG_car3.jpg"></a>
+            </li>
+            <li id="slide_3" class="li_slide">
+                <div class="slide-snapper"></div>
+                <a class="prev_slide" href="/public/images/TorG_car3.jpg"></a>
+                <a class="next_slide" href="/public/images/TorG_car4.jpg"></a>
+            </li>
+            <li id="slide_4" class="li_slide">
+                <div class="slide-snapper"></div>
+                <a class="prev_slide" href="/public/images/car4.jpg"></a>
+                <a class="next_slide" href="/public/images/TorG_car1.jpg"></a>
+            </li>
+        </ol>
+    </div>
+    <div class="form">
+        <div class="text">
+            Welcome<br />
+            To WayFar!
+            <br>
+            <br>
+        </div>
+        <div class="formcontent">
+            <form action="/TorGsubmit" method="post">
+                <div>
+                    <button type="submit" name="tourist">Tourist</button>
+                    <button type="submit" name="guide">Guide</button>
+                </div><br>
+        </div>
+
+    </div>
+    </div>
+    <script src="/public/js/TorG.js"></script>
+</body>
+
+</html>

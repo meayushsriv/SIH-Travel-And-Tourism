@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/guidedetails.css" />
+    <title>Register - WayFar</title>
+    <link rel="icon" type="image/x-icon" href="/public/images/Favicon.jpg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+
+<body>
+    <!-- ==========================HEADER========================= -->
+    <div class="header">
+        <div class="logo"><img src="/public/images/Logo.png" height="75px" width="75px"></div>
+        <div class="menu">
+            <svg class="line-top" width="750" height="0px" viewbox="0,0 1000,20">
+                <line class="line-dash" x1="0" y1="15" x2="1000" y2="15"
+                    style="stroke: lightcyan; stroke-width:2; stroke-linecap:round; stroke-dasharray: 180,1200; stroke-dashoffset: -35;" />
+            </svg>
+            <ul>
+                <li><a href="/" style="text-decoration: none; color: #ffffff;">Home</a></li>
+                <li><a href="/about" style="text-decoration: none; color: #ffffff;">About</a></li>
+                <li><a href="/login" style="text-decoration: none; color: #ffffff;">Log in</a></li>
+            </ul>
+            <br>
+            <!-- <svg class="line-bottom" width="750" height="30" viewbox="0,0 1000,40">
+            <polygon class="lb" points="35,53 115,53 125,43 135,53 215,53" />
+            <polygon class="lb" points="285,53 365,53 375,43 385,53 465,53" />
+            <polygon class="lb" points="535,53 615,53 625,43 635,53 715,53" />
+            <polygon class="lb" points="785,53 865,53 875,43 885,53 965,53" />
+            </svg> -->
+        </div>
+    </div>
+    <!-- =========================SLIDER========================== -->
+    <div id="pSlider" style="margin-top: 10vh;">
+        <ol id="slider-container" dir="ltr">
+            <li id="slide_1" class="li_slide">
+                <div class="slide-snapper"></div>
+                <a class="prev_slide" href="/public/images/car1.jpg"></a>
+                <a class="next_slide" href="/public/images/car2.jpg"></a>
+            </li>
+            <li id="slide_2" class="li_slide">
+                <div class="slide-snapper"></div>
+                <a class="prev_slide" href="/public/images/car2.jpg"></a>
+                <a class="next_slide" href="/public/images/car3.jpg"></a>
+            </li>
+            <li id="slide_3" class="li_slide">
+                <div class="slide-snapper"></div>
+                <a class="prev_slide" href="/public/images/car3.jpg"></a>
+                <a class="next_slide" href="/public/images/car4.jpg"></a>
+            </li>
+            <li id="slide_4" class="li_slide">
+                <div class="slide-snapper"></div>
+                <a class="prev_slide" href="/public/images/car4.jpg"></a>
+                <a class="next_slide" href="/public/images/car1.jpg"></a>
+            </li>
+        </ol>
+    </div>
+    <!-- ==========================FORM=========================== -->
+    <div class="form">
+        <div class="text">
+            Tour Guide Registration
+            <hr>
+        </div>
+        <div class="formcontent1">
+            <form action="/submitguideinfo" method="post">
+                <div><label for="name">Name : </label></div>
+                <div><input type="text" name="name" required /></div><br>
+                <div><label for="no">Mobile Number : </label></div>
+                <div><input type="number" name="no" maxlength="10" required /></div><br>
+                <div><label for="email">Email : </label></div>
+                <div><input type="email" name="email" required /></div><br>
+                <div><label for="state">State : </label></div>
+                <br>
+                <select name="state" required>
+                    <option value="" selected disabled hidden>Select</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+                <div class="form2">
+                    <label for="des">Description (50 words)</label><br>
+                    <input type="text" id="myfile" name="des"><br><br>
+                    <!-- <label for="certificate">myGov Certicate</label><br>
+                <input type="file" id="myfile" name="myfile"><br><br> -->
+                    <!-- <div><label for="email">City : </label></div>
+                <div><input type="email" maxlength="10" required /></div><br> -->
+                    <div><label for="price">Price/Person:(₹) </label></div>
+                    <div><input type="number" name="price" maxlength="10" required /></div><br>
+                </div>
+                <br><br><br>
+        </div>
+        <input class="certificate" type="checkbox" name="cBox[]" value="3"
+            onchange="document.getElementById('formName').submit()"></input>
+        <p class="certext">I am hereby a certified tour guide by Indian Government</p>
+        <div class="wrapper">
+            <button class="">
+                <span>Submit</span>
+                <div class="success">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 29.756 29.756"
+                        style="enable-background:new 0 0 29.756 29.756;" xml:space="preserve">
+
+                        <path
+                            d="M29.049,5.009L28.19,4.151c-0.943-0.945-2.488-0.945-3.434,0L10.172,18.737l-5.175-5.173   c-0.943-0.944-2.489-0.944-3.432,0.001l-0.858,0.857c-0.943,0.944-0.943,2.489,0,3.433l7.744,7.752   c0.944,0.943,2.489,0.943,3.433,0L29.049,8.442C29.991,7.498,29.991,5.953,29.049,5.009z" />
+                    </svg>
+                </div>
+            </button>
+        </div>
+    </div>
+    </div>
+    <br><br><br><br><br>
+    <script src="/public/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Ubuntu:wght@700&display=swap");
+body {
+  background-image: url("/public/images/aboutindex.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+  font: 400 10px "Lato", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+html {
+  height: 100%;
+}
+.noacc {
+  font-size: 10px;
+  font-family: Ubuntu;
+  color: white;
+  text-decoration: none;
+}
+.logo {
+  float: left;
+  position: relative;
+  top: -14px;
+  left: -5px;
+}
+.header {
+  width: 100%;
+  height: 50px;
+  background: #17141d87;
+  backdrop-filter: blur(10px);
+  opacity: 0.95;
+  overflow: hidden;
+  -webkit-box-shadow: #333 1px 3px 4px;
+  -moz-box-shadow: #333 1px 3px 4px;
+  box-shadow: #333 1px 3px 4px;
+  position: fixed;
+}
+svg.line-top {
+  width: 100%;
+  background-color: #17141d;
+}
+svg.line-bottom {
+  position: absolute;
+  top: 50px;
+  left: -280px;
+  width: 100%;
+}
+.menu {
+  width: 750px;
+  margin: 0 auto;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  margin: 0;
+  padding: 10px 0 10px 0;
+  width: 25%;
+  height: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 3.5px;
+  transition: all 0.5s ease-out;
+}
+
+li.active {
+  color: lightcyan;
+  transform: scale(1.1);
+}
+
+polygon {
+  stroke-width: 2px;
+  stroke: lightcyan;
+  fill: lightcyan;
+}
+
+@media (max-device-width: 991px) {
+  .header {
+    height: 64px;
+  }
+
+  body {
+    font-size: 0.4em;
+  }
+  .content {
+    height: calc(100% - 64px);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 83.6vh;
+  width: 68vw;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.411);
+  backdrop-filter: blur(6px);
+  padding: 2%;
+  border: solid;
+  border-radius: 10px;
+  position: absolute;
+  top: 90px;
+  left: 390px;
+  font-size: 10px;
+  font-family: Ubuntu;
+  box-shadow: 5px 5px 10px;
+}
+.text {
+  color: white;
+}
+.gif {
+  position: relative;
+  top: -10px;
+  left: -10px;
+  background-color: transparent;
+}
+.container {
+  position: absolute;
+  height: 300px;
+  width: 900px;
+  top: 170px;
+  left: calc(50% - 550px);
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+}
+
+.card {
+  display: flex;
+  height: 364px;
+  width: 260px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  /*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+  margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  background-color: #0000006f;
+  border-radius: 10px;
+  font-family: Ubuntu;
+  font-size: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0, 154, 217);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 154, 217, 1) 0%,
+    rgba(217, 147, 0, 1) 65%,
+    rgba(255, 186, 0, 1) 100%
+  );
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

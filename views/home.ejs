@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/home.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://themify.me/wp-content/themes/themify-v32/themify-icons/themify-icons.css" />
+    <title>Guide List</title>
+    <link rel="icon" type="image/x-icon" href="/public/images/Favicon.jpg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"><img src="/public/images/Logo.png" height="80px" width="80px"></div>
+        <div class="menu">
+            <svg class="line-top" width="750" height="0px" viewbox="0,0 1000,20">
+                <line class="line-dash" x1="0" y1="15" x2="1000" y2="15"
+                    style="stroke: lightcyan; stroke-width:2; stroke-linecap:round; stroke-dasharray: 180,1200; stroke-dashoffset: -35;" />
+            </svg>
+            <ul>
+                <li><a href="/" style="text-decoration: none; color: #ffffff;">Home</a></li>
+                <li><a href="/about" style="text-decoration: none; color: #ffffff;">About</a></li>
+                <li><a href="/login" style="text-decoration: none; color: #ffffff;">Log in</a></li>
+            </ul>
+            <br>
+            <!-- <svg class="line-bottom" width="750" height="30" viewbox="0,0 1000,40">
+                <polygon class="lb" points="35,53 115,53 125,43 135,53 215,53" />
+                <polygon class="lb" points="285,53 365,53 375,43 385,53 465,53" />
+                <polygon class="lb" points="535,53 615,53 625,43 635,53 715,53" />
+                <polygon class="lb" points="785,53 865,53 875,43 885,53 965,53" />
+            </svg> -->
+        </div>
+    </div>
+    <div class="container" style="overflow: hidden; width: 100%;">
+        <div class="slider">
+            <div class="box1">
+            </div>
+            <div class="box2">
+            </div>
+            <div class="box3">
+            </div>
+            <div class="box4">
+            </div>
+            <div class="box5">
+            </div>
+            <div class="box6">
+            </div>
+            <div class="box7">
+            </div>
+        </div>
+    </div>
+    <section class="places">
+        <div class="places-text">
+            <h2>Search Results</h2>
+        </div>
+        <div class="cards">
+            <% for (let i=0; i < data.length; i++) { %>
+                <% const item=data[i]; %>
+                    <div class="card">
+                        <div class="zoom-img">
+                            <div class="img-card">
+                                <img src="/public/images/homegoa.jpg">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="text" style="font-size: 20px;">
+                            <div><strong><span class="rating" style="color: red;">
+                                        <%= item.name %>
+                                    </span></strong></div>
+                            <br><br><br>
+                            <span class="rating">⭐⭐⭐⭐⭐</span>
+                            <h2></h2>
+                            <%= item.state %>
+                                <h3>Des:-</h3>&nbsp;<h5><span id="des">
+                                        <%= item.des %>
+                                    </span></h5>
+                                <p class="cost">₹<%= item.price %>/person</p>
+                                <div class="card-box">
+                                    <p class="time">As per your requirement</p>
+                                    <p class="location">Contact +91-<%= item.no %>
+                                    </p>
+                                </div>
+                        </div>
+                    </div>
+                    <% } %>
+        </div>
+
+    </section>
+    </div>
+
+    <br><br><br>
+    <hr>
+    <div class="second">
+        <!--==============Places===================-->
+        <section class="places">
+            <div class="places-text">
+                <h2>Trending Places</h2>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img src="/public/images/homeagra.jpg">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>Agra</h2>
+                        <p class="cost">₹2000/Day</p>
+                        <div class="card-box">
+                            <p class="time">🕓 3 Days</p>
+                            <p class="location">✈ Agra, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img src="/public/images/homedelhi.jpg">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>Delhi</h2>
+                        <p class="cost">₹2500/Day</p>
+                        <div class="card-box">
+                            <p class="time">🕓 3 Days</p>
+                            <p class="location">✈ Delhi, India</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img src="/public/images/homepuri.jpg">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>Puri</h2>
+                        <p class="cost">₹1500/Day</p>
+                        <div class="card-box">
+                            <p class="time">🕓 3 Days</p>
+                            <p class="location">✈ Puri, India</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img src="/public/images/homepuri.jpg">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>Goa</h2>
+                        <p class="cost">₹2000/Day</p>
+                        <div class="card-box">
+                            <p class="time">🕓 3 Days</p>
+                            <p class="location">✈ Goa, India</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img src="/public/images/homejaipur.jpg">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>Jaipur</h2>
+                        <p class="cost">₹1500/Day</p>
+                        <div class="card-box">
+                            <p class="time">🕓 3 Days</p>
+                            <p class="location">✈ Jaipur, India</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img src="/public/images/homebangalore.jpg">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>Bengaluru</h2>
+                        <p class="cost">₹2000/Day</p>
+                        <div class="card-box">
+                            <p class="time">🕓 3 Days</p>
+                            <p class="location">✈ Bengaluru, India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="wrapper">
+        </div>
+        <br><br><br>
+        <hr>
+        <br>
+        <br>
+        <div class="blank">
+            <section class="main">
+                <div class="main-card">
+                    <div class="card-top">
+                        <h3>INDIAN GOVERNMENT</h3>
+                        <h3>Swachh Bharat Mission</h3>
+                        <form action="/sbm" method="post">
+                            <div class="card-bottom">
+                                <input class="email" name="location" placeholder="Enter the location : " size="50"
+                                    required>
+                                <div class="card-bottom">
+                                    <input type="" class="email" name="complaint" placeholder="Enter the complaint : "
+                                        size="50" required>
+                                    <input type="file" id="myfile" name="myfile">
+                                    <div class="btn-grp">
+                                        <button>Add complaint</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+            </section>
+            <section class="main">
+                <div class="main-card">
+                    <div class="card-top">
+                        <h3>TOURIST HELPLINE</h3>
+                        <h3>Compliant about the guide : </h3>
+                        <form action="/tcomplain" method="post">
+                            <div class="card-bottom">
+                                <input type="" class="text" name="name" placeholder="Enter the guide name : " size="50"
+                                    required>
+                                <div class="card-bottom">
+                                    <input type="number" class="email" name="no"
+                                        placeholder="Enter guide's mobile number : " size="50" required>
+                                    <input type="text" class="email" name="complaint"
+                                        placeholder="Enter the complaint : " size="50" required>
+                                    <div class="btn-grp">
+                                        <button>Add complaint</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+            </section>
+
+        </div>
+
+        <table style="border-collapse: collapse;
+            width: 80%;
+            margin: 200px auto;
+            padding: 100px;
+          ">
+            <tr>
+                <th style="border: 1px solid #000;
+                    padding: 8px;
+                    text-align: left;background-color:#f2f2f2;
+
+                  ">Women Helpline Numbers</th>
+                <td style="border: 1px solid #000;
+                    padding: 8px;
+                    text-align: left;
+                  ">181, 1091</td>
+            </tr>
+            <tr>
+                <th style="border: 1px solid #000;
+                    padding: 8px;
+                    text-align: left;background-color:#f2f2f2;
+                  ">Children Helpline Numbers</th>
+                <td style="border: 1px solid #000;
+                    padding: 8px;
+                    text-align: left;
+                  ">1098</td>
+            </tr>
+        </table>
+
+        <!--===========About Us===============-->
+        <section class="about">
+            <div class="about-img">
+                <img src="/public/images/homecar4.jpg">
+            </div>
+            <div class="about-text">
+                <small>ABOUT OUR TEAM</small>
+                <h2 class="des">We Are WayFar Team</h2>
+                <p>Assuring happy and satisfied customers. Have a safe and all-in-one tour package with a government
+                    certified local guide. We have contribution in Swacch Bharat Association. You can also put your
+                    feedback thus contributing in keeping the tourist places clean.
+                </p>
+                <a id="at" href="/about">ABOUT US</a>
+            </div>
+        </section>
+        <!--===========Footer=================-->
+
+        <footer class="new_footer_area bg_color">
+            <div class="new_footer_top">
+                <div class="container1">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
+                                style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                                <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                                <p>Don't miss any updates of our new packages and tours discount!</p>
+                                <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true"
+                                    _lpchecked="1">
+                                    <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                                    <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                                    <p class="mchimp-errmessage" style="display: none;"></p>
+                                    <p class="mchimp-sucmessage" style="display: none;"></p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s"
+                                style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                                <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+                                <ul class="list-unstyled f_list" style="background-color: white;">
+                                    <li><a id="at" href="#" style="background-color: white;">WayFar</a></li>
+                                    <li><a id="at" href="#" style="background-color: white;">Trending Destination</a>
+                                    </li>
+                                    <li><a id="at" href="#" style="background-color: white;">Discounts & Offers</a></li>
+                                    <li><a id="at" href="#" style="background-color: white;">Tour Packages</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s"
+                                style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                                <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                                <ul class="list-unstyled f_list">
+                                    <li><a id="at" href="#" style="background-color: white;">FAQ</a></li>
+                                    <li><a id="at" href="#" style="background-color: white;">Term &amp; conditions</a>
+                                    </li>
+                                    <li><a id="at" href="#" style="background-color: white;">Compliant To Swacch Bharat
+                                            Ass.</a></li>
+                                    <li><a id="at" href="#" style="background-color: white;">About Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
+                                style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                                <h3 class="f-title f_600 t_color f_size_18" style="background-color: white;">WayFar Team
+                                </h3>
+                                <div class="f_social_icon">
+                                    <a href="#" class="fab fa-facebook"></a>
+                                    <a href="#" class="fab fa-twitter"></a>
+                                    <a href="#" class="fab fa-linkedin"></a>
+                                    <a href="#" class="fab fa-pinterest"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bg">
+                    <div class="footer_bg_one"></div>
+                    <div class="footer_bg_two"></div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="container1">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-7">
+                            <p class="mb-0 f_400">©WayFar~2024 All rights reserved.</p>
+                        </div>
+                        <div class="col-lg-6 col-sm-5 text-right">
+                            <p>Made with <i class="icon_heart"></i> in <a id="at" href="http://cakecounter.com"
+                                    target="_blank" style="color: red;background-color: white;">WayFar</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
+<script src="/public/js/home.js"></script>
+</body>
+
+</html>
